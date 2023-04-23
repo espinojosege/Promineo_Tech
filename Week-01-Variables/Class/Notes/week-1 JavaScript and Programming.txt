@@ -1,0 +1,174 @@
+We will be learning about Javascript:
+Javascript is a high level language that is used as one of the core languages of the internet.
+It was released in 1995. JavaScript is a front end programming language that can only run in web browsers.
+In 2009 Nodejs came out and it was able to be used outside of the web browsers. As a result, it is able to be used in the back end programming.
+In this course, we will learn some of the core programming constructs that JavaScript provides.
+These constructs can then be combined with HTML and CSS to create a website or an application.
+
+NOTES: RESOURCES
+1.)	JavaScript Documentation (MDN Web Docs)
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+2.)	JavaScript Basics
+	https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+
+3.)	HTML Basics
+	https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics
+
+4.)	CSS Basics
+	https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics
+
+1.)	JavaScript Documentation (MDN Web Docs):
+JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+
+Javascript's dynamic capabilities include runtime object construction, variable parameters lists, function variables, dynamic script creating (via eval), object introspection (via for...in and Object utilities), and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).
+
+The standards for JavaScript are the ECMAScript Language Specification (ECMA-262) and the ECMAScript Internationalization API specification (ECMA-402). As soon as one browser implements a feature, we try to document it. This means that cases where some proposals for new ECMAScript features have already been implemented in browsers, documentation and examples in MDN articles may use some of those new features. Most of the time, this happens between the stages 3 and 4, and is usually before the spec is officially published.
+
+1a.)	The JavaScript guide:
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+
+1b.)	The JavaScript reference:
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+
+1a.)	The JavaScript Guide Chapters:
+			1.)Introduction:
+				A.)	About this guide
+				B.)	About JavaScript
+				C.)	JavaScript and Java
+				D.)	Tools
+				E.)	Hello World
+				F.)	ECMAScript
+			
+			2.)Grammar and Types:
+				A.)	Basic syntax & comments
+				B.)	Declarations
+				C.)	Variable scope
+				D.)	Variable hoisting
+				E.)	Data structures and types
+				F.)	Literals
+			
+			3.)Control flow and error handling
+				A.)	if...else
+				B.)	switch
+				C.)	try/catch/throw
+				D.)	Error objects
+
+			4.)Loops and iteration			
+				A.)	for
+				B.)	while
+				C.)	do...while
+				D.)	continue
+				E.)	break
+				F.)	for...in
+				G.)	for...of
+
+			5.)Functions
+				A.)	Defining functions
+				B.)	Calling functions
+				C.)	Function scope
+				D.)	Closures
+				E.)	Arguments & parameters
+				F.)	Arrow functions
+			
+			6.)Expressions and operators
+				A.)	Assignment & Comparisons
+				B.)	Arithmetic operators
+				C.)	Bitwise & logical operators
+				D.)	Conditional (ternary) operators
+
+			7.)Numbers and dates
+				A.)	Number literals	
+				B.)	Number object
+				C.)	Math object
+				D.)	Date object
+				
+			8.)Text formatting
+				A.)	String literals
+				B.)	String object
+				C.)	Template literals
+				D.)	Internationalization
+				E.)	Regular Expressions
+			
+			9.)Indexed collections
+				A.)	Arrays
+				B.)	Typed Arrays
+			
+		   10.)Keyed collections
+				A.)	Map
+				B.)	WeakMap
+				C.)	Set
+				D.)	WeakSet
+				
+		   11.)Working with objects
+		   		A.)	Objects and properties
+				B.)	Creating objects
+				C.)	Defining methods
+				D.)	Getter and setter
+
+		   12.)Using Classes
+		   		A.)	Declaring a Class
+				B.)	Various class features
+				C.)	Extends and inheritance
+				D.)	Why classes?
+
+		   13.)Promises
+		   		A.)	Guarantees
+				B.)	Chaining
+				C.)	Error handling
+				D.)	Composition
+				E.)	Timing
+
+		   14.)Iterators and generators
+		   		A.)	Iterators
+				B.)	Iterables
+				C.)	Generators
+
+		   15.)Meta programming
+		   		A.)	Proxy
+				B.)	Handlers and traps
+				C.)	Revocable Proxy
+				D.)	Reflect
+
+		   16.)JavaScript modules
+		   		A.)	Exporting
+				B.)	Importing
+				C.)	Default exports
+				D.)	Renaming features
+				E.)	Aggregating modules
+				F.)	Dynamic module loading
+
+		1a.)About this guide:
+				This guide provides an overview about the JavaScript language and its objects.
+				What you should already know: This guide assumes you have the following basic background:
+				A general understanding of the internet and the World Wide Web (WWW).
+				Good working knowledge of HyperText Markup Language (HTML).
+				Some programming experience.
+		
+		1b.)About JavaScript:
+				JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive 
+				(e.g. having complex animations, clickable buttons, popup menus, etc.).
+				There are also more advanced server side versions of JavaScript such as Node.js, which allow you to add more
+				functionality to a website than downloading files (such as realtime collaboration between multiple computers).
+				Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment
+				to provide programmatic control over them.
+
+				JavaScript contains a standard library of objects, such as array, date, and math, and a core of language elements such as
+				operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing
+				it with additional objects; for example:
+				
+				Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model(DOM).
+				For example, client-side extensions allow an application to place elements on an HTML form and respond to user events
+				such as mouse clicks, form input, and page navigation.
+
+				Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server.
+				For Example, server-side extensions allow an application to communicate with a database, provide continuity of 
+				information from one invocation to another of the application, or perform file manipulations on a server.
+
+				This means that in the browser, JavaScript can change the way the webpage (DOM) looks. And, likewise, Node.js JavaScript
+				on the server can respond to custom requests sent by code executed in the browser.
+
+		1c.)JavaScript and Java:
+				
+				
+				

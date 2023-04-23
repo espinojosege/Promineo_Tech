@@ -1,0 +1,80 @@
+1.)What is Programming? (video notes:)
+
+Programming is writing instructions for a computer to follow.
+This typically involves moving, manipulating, and displaying data in a manner
+that is useful to us as humans. To do this effectively, we need need to realize that
+as humans, we take advantage of how powerful our minds are. and don't often think of the tiny steps
+into making any given decision. when we program, we have to think about what all the small steps are
+to tell the computer exactly what to do one tiny step at a time.
+for example, how many words are in the sentence, The cat jumped off the shelve and landed on my hand.
+There are eleven words in this sentence, now how do we know that? we might say something like, because
+i counted the words? but how do we know how to count words, what is actually is going on, is when we are counting the words
+our brains are simplifying the process for us so we don't have to think about everything that goes into simply counting the words
+in the sentence. but the problem is computers are not that smart. which means to write instructions for a computer to do something
+we need to break down tasks into the simplest steps possible. within reason of course. take this word count for example.
+we start by counting from 0, we look at each character, and when we see a space we increment our count by one. This is how we know
+there is a new word to add to our total count because we see the space character. Think hard about the algorithmic steps of how we as humans
+do what may seem simple tasks. This will help us a lot when we are learning how to program.
+
+Programming is writing instructions for a computer that tell it how to move, manipulate, and display data in an automated fashion.
+
+Steps to Programming:
+Decide how to solve a task or request -- remember to break the task into smaller pieces to be solved
+Write the code to solve the task by first writing code to solve each smaller piece of the solution
+Compile and/or run the program that has been written.
+Test and Debug the program
+    Test: Make sure the code words as designed
+    Debug: Track down and fix any flaws in the code that you wrote.
+Document exactly what has been coded and how it works.
+
+2.)Command Line Interface (CLI) (video notes:)
+
+C:\Users\espin>         Would be how the command line displays itself in a terminal
+
+>dir                    displays all the directories in the folder
+>ls                     displays all the directories in the folder
+
+>dir [dir name]         displayed directory of dir selected without having to be inside of directory
+
+>cd [name of directory] change directories. (using tab will auto-complete path)
+
+>cd..                   To current directory parent directory
+>cd../..                To go back 2 directories
+
+>[full path]            To directory of path entered
+
+>cls                    clears terminal screen
+
+>mkdir                  create directory [if includes spaces requires double ""]
+
+>copy [item being copied] [destination being copied to]
+                        
+                        copies file to destination directory
+
+>copy test.txt testcopy.txt
+
+                        copies file test.txt and names it testcopy.txt in the current directory
+
+
+>del                    deletes file or folder 
+
+>move                   moves file to new directory
+
+>echo "text to put into the file" > filename
+
+                        creates a file with text inside of it.
+
+3.)Variables, Data Types, and Operations (video notes:)
+
+In programming we use things called variables to help us keep track of data. If you have apiece of data
+lets say 56.95, how can we tell what that number represents? we can't. unless we have a label or name assigned to it.
+So if we say our trash bill is 56.95 then that number would make more sense. We could then even just say trash bill and it would represent
+the number without heaving the state the number again itself. This is how variables work. We assign a name to some data then anytime we
+refer to that name, we are referring to the data it's assigned to which makes it much easier to keep track of and process data. Data
+isn't just numbers though, it can come in different types, some others types of data include textual data like words and characters, boolean
+data such as true or false, and a few others. JavaScript is a dynamically typed language. That means that when we declare a variable we don't
+have to explicitly say what type of data that variable will be representing. instead, JavaScript infers the data type based on the data. for example
+it knows that first name would be a string if i assigned the value sam to it. and if I assign the value 10.50 to it, then it would know it's a number
+and it would treat first name as a number. lets look at some of the most common data types in JavaSCript and how to declare a variable using them. to start a variable deceleration has a few parts, first we need to say that we are declaring a variable. to do that we use the var keyword. Next we give our variable a name. A variable name should be descriptive of what the data is that it's identifying. for example. if we want to have a variable that points to the balance in our bank account. a good variable name could be bankAccountBalance. This style of writing variable names where the first letter of the first word is lowercase and the first letter of each additional word is capitalized is called camel case and is the standard convention for variables in JavaScript. Next we assign a value to our variable using the assignment operator or equal sign. and then put the value on the right side of the operator. finally we end with a semicolon. semicolon are like periods in JavaScript, whenever you end a statement you want to put a semicolon. String data is denoted by single quotes or double quotes. Here are a couple of examples. var firstName = "Tom"; JavaScript knows that this is a string because it is in between double quotes. var lastName = 'Sawyer'; It also knows that this is a string because it is between single quotes. There is no difference between single quotes or double quotes other than the preference of the developers. numeric data is denoted without any quotes and using only numbers. the numbers can have decimals or be whole numbers. Here are a few examples. var numberOfFriends = 5; Here notice that there are no quotes around it. just a number and javaScript knows that because numberofFriends is assigned 5 any time we refer to numberOfFriends we'll be referring to that value 5. We already have another example here bankAccountBalance where we have a decimal. Boolean data is true or false. written complete out with no quotes. here are a couple or examples. var isHotOUtside = false; var isHappy = true;
+again, notice there are not quotes around it like our strings, false and true are both keywords in JavaScript used for boolean values. We will learn more about data types in later courses. but for now knowing how to declare a variable and knowing that JavaScript infers the data types based on the assigned data is the most important thing to understand.
+
