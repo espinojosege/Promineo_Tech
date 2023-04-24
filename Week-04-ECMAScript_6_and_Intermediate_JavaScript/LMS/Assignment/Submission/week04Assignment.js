@@ -1,7 +1,7 @@
 function cLogRed(str) {                             // created function called 'cLogRed' with one parameter, a string. Returns a console.log function
     return console.log('\x1b[31m%s\x1b[0m', str);   // that logs the string red. The function takes in 2 parameters, the output color and the string.
-};                                                  // 1st parameter: \x1b[31m is the color red, %s is a placeholder for the string, \x1b[0m resets the color on exit
-                                                    // 2nd parameter: the string which will be placed inside the first parameter. will replace %s when code logs to console.
+};                                                  // 1st parameter: '\x1b[31m' is the color red, '%s' is a placeholder for the string, '\x1b[0m' resets the color on exit
+                                                    // 2nd parameter: the string which will be placed inside the first parameter. will replace '%s' when code logs to console.
                                                     // can also be written as followed: console.log('\x1b[31mString\x1b[0m')
 let ages = [3, 9, 23, 64, 2, 8, 28, 93];
 console.log(`\n\n! ~~~~~     Week 04 Assignment      ~~~~~ !`)
