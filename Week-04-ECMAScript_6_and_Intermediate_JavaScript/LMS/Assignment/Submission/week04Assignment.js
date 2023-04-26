@@ -23,17 +23,55 @@ cLogRed(`1c. Use a loop to iterate through the array and calculate the average a
 
 
 console.log(`\n\n! ~~~~~        Question 2           ~~~~~ !`);
-console.log(`\n\n! ~~~~~        Question 3           ~~~~~ !`);
-console.log(`\n\n! ~~~~~        Question 4           ~~~~~ !`);
-console.log(`\n\n! ~~~~~        Question 5           ~~~~~ !`);
-console.log(`\n\n! ~~~~~        Question 6           ~~~~~ !`);
-console.log(`\n\n! ~~~~~        Question 7           ~~~~~ !`);
-console.log(`\n\n! ~~~~~        Question 8           ~~~~~ !`);
-console.log(`\n\n! ~~~~~        Question 9           ~~~~~ !`);
-console.log(`\n\n! ~~~~~        Question 10          ~~~~~ !`);
-console.log(`\n\n! ~~~~~        Question 11          ~~~~~ !`);
-console.log(`\n\n! ~~~~~        Question 12          ~~~~~ !`);
-console.log(`\n\n! ~~~~~        Question 13          ~~~~~ !`);
+// 2.	Create an array called names that contains the following values: ‘Sam’, ‘Tommy’, ‘Tim’, ‘Sally’, ‘Buck’, ‘Bob’.
+// 2a.	Use a loop to iterate through the array and calculate the average number of letters per name. 
+// 
+// 2b.	Use a loop to iterate through the array again and concatenate all the names together, separated by spaces. 
+// 
+// console.log(`\n\n! ~~~~~        Question 3           ~~~~~ !`);
+// 3.	How do you access the last element of any array?
+// 
+// console.log(`\n\n! ~~~~~        Question 4           ~~~~~ !`);
+// 4.	How do you access the first element of any array?
+// console.log(`\n\n! ~~~~~        Question 5           ~~~~~ !`);
+// 5.	Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
+// 
+// For example:
+// 
+// let names = ["Kelly", "Sam", "Kate"]; 	//starting with this array
+// let nameLengths = [5, 3, 4]; 			//create this new array
+// 
+// console.log(`\n\n! ~~~~~        Question 6           ~~~~~ !`);
+// 6.	Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array. 
+// 
+// 
+// console.log(`\n\n! ~~~~~        Question 7           ~~~~~ !`);
+// 7.	Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in ‘Hello’ and 3, I would expect the function to return ‘HelloHelloHello’).
+// 
+// 
+// console.log(`\n\n! ~~~~~        Question 8           ~~~~~ !`);
+// 8.	Write a function that takes two parameters, firstName and lastName, and returns a full name.  The full name should be the first and the last name separated by a space.
+// 
+// 
+// console.log(`\n\n! ~~~~~        Question 9           ~~~~~ !`);
+// 9.	Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
+// 
+// 
+// console.log(`\n\n! ~~~~~        Question 10          ~~~~~ !`);
+// 10.	Write a function that takes an array of numbers and returns the average of all the elements in the array.
+// 
+// 
+// console.log(`\n\n! ~~~~~        Question 11          ~~~~~ !`);
+// 11.	Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
+// 
+// 
+// console.log(`\n\n! ~~~~~        Question 12          ~~~~~ !`);
+// 12.	Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
+// 
+// 
+// console.log(`\n\n! ~~~~~        Question 13          ~~~~~ !`);
+// 13.	Create a function of your own that solves a problem.   In comments, write what the function does and why you created it.
+// 
 
 
 
