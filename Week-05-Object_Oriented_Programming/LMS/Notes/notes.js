@@ -20,7 +20,7 @@ console.log(`let names = ['Sam', 'Tom', 'Eric', 'Sally', 'Nicholas'];
 let lengths = names.map((element) => element.length);
 console.log(lengths);`);
 
-let names = ['Sam', 'Tom', 'Eric', 'Sally', 'Nicholas'];
+let names1 = ['Sam', 'Tom', 'Eric', 'Sally', 'Nicholas'];
 // declared an array called names.
 let lengths = names.map((element) => element.length);
 // declared a new variable that hold the .map method used on names array that creates a new array with the giving function.
