@@ -40,9 +40,9 @@ let alphabetString = 'abcdefghijklmnopqrstuvwxyz';
  * 
  * ↓ YOUR CODE HERE ↓ */
 
+let alphabetStringArray = alphabetString.split();
 
-
-
+console.log(alphabetStringArray);
 
 
 // Question 2: alphabetArray
@@ -59,9 +59,10 @@ let alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
  * 
  * ↓ YOUR CODE HERE ↓ */
 
-
-
-
+let reverseAlphabetArray = alphabetArray.reverse();
+console.log(reverseAlphabetArray);
+let reverseAlphabetString = reverseAlphabetArray.join("");
+console.log(reverseAlphabetString);
 
 
 // Question 3: array1
@@ -82,9 +83,12 @@ let array1 = [1, 5, 6, 9, 10, 14];
  * 
  * ↓ YOUR CODE HERE ↓ */
 
-
-
-
+console.log(array1);
+console.log(array1[2]);
+console.log(array1[array1.length - 1]);
+array1.push(16, 3);
+console.log(array1);
+console.log(array1[array1.length - 1]);
 
 
 // Question 4: Todo List
@@ -102,11 +106,17 @@ Question 4: Todo List \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
-
-
-
-
-
+let myTodoList = [];
+console.log(myTodoList);
+myTodoList.push("brush teeth", "set alarms", "sleep");
+console.log(myTodoList);
+myTodoList.splice(1, 1);
+console.log(myTodoList);
+let yourTodoList = [];
+yourTodoList.push("wake up", "turn off Alarms");
+console.log(yourTodoList);
+let ourTodoList = myTodoList.concat(yourTodoList);
+console.log(ourTodoList);
 
 // Question 5: isEven 
 console.log(`--------------------------
@@ -123,17 +133,23 @@ Question 5: isEven  \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
-
+const isEven = (x) => {
+       if (x % 2 === 0) {
+              return true;
+       } else {
+              return false;
+       }
+};
 
 
 
 /* ↑ YOUR CODE HERE ↑ */
 
 //! Sample test cases for the above isEven function (uncomment to test)
-//console.log(isEven(2));   //should return true
-//console.log(isEven(3));   //should return false
-//console.log(isEven(4));   //should return true
-//console.log(isEven(5));   //should return false
+console.log(isEven(2));   //should return true
+console.log(isEven(3));   //should return false
+console.log(isEven(4));   //should return true
+console.log(isEven(5));   //should return false
 
 
 
@@ -152,16 +168,23 @@ Question 6: addingMachine \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
-
+const addingMachine = (array) => {
+       let sum = 0;
+       for (let index = 0; index < array.length; index++) {
+              sum += array[index];
+              
+       }
+       return sum;
+}
 
 
 
 /* ↑ YOUR CODE HERE ↑ */
 
 //! Sample test cases for the above isEven function (uncomment to test)
-//console.log(addingMachine([1, 2, 3, 4, 5]));                    //should return 15
-//console.log(addingMachine([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));    //should return 55
-//console.log(addingMachine([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])); //should return 120
+console.log(addingMachine([1, 2, 3, 4, 5]));                    //should return 15
+console.log(addingMachine([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));    //should return 55
+console.log(addingMachine([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])); //should return 120
 
 
 
@@ -185,17 +208,82 @@ Question 7: reverse \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
+const reverseString = (argStr) => {
+  let result;
+  let arrayA = argStr.split("");
+  let rArrayA = arrayA.reverse();
+  result = rArrayA.join("");
+  return result;
+};
 
+const reverseNum = (argNum) => {
+  let result;
+  let argStr = reverseString(argNum.toString());
+  result = parseInt(argStr);
+  return result;
+};
 
+const reverseStrOrNum = (arg) => {
+  let typeOfArg = typeof arg;
 
+  let result;
+
+  switch (typeOfArg) {
+    case "string":
+      result = reverseString(arg);
+      break;
+    case "number":
+      result = reverseNum(arg);
+      break;
+    default:
+      result = "argument invalid (not any type)";
+      break;
+  }
+
+  return result;
+};
+
+const reverseArray = (arg) => {
+  return arg.reverse();
+};
+
+const reverseArrayElement = (arg) => {
+  let emptyArray = [];
+  for (let i = 0; i < arg.length; i++) {
+    const a = arg[i];
+    emptyArray.push(reverseStrOrNum(a));
+  }
+
+  return emptyArray;
+};
+
+const reverse = (arg) => {
+  let typeOfArg = typeof arg;
+
+  let result;
+
+  if (typeOfArg === "string" || typeOfArg === "number") {
+    result = reverseStrOrNum(arg);
+  } else if (typeOfArg === "boolean") {
+    result = !arg;
+  } else if (Array.isArray(arg)) {
+    result = reverseArray(reverseArrayElement(arg));
+  } else {
+    result = "argument invalid (not any type)";
+  }
+
+  return result;
+};
 
 /* ↑ YOUR CODE HERE ↑ */
 
 // Sample test cases for the above reverse function (uncomment to test)
-//console.log(reverse(1234));         //should return 4321
-//console.log(reverse('hello'));      //should return 'olleh'
-//console.log(reverse(true));         //should return false
-//console.log(reverse([1, 2, 3, 4])); //should return [4, 3, 2, 1]
+console.log(reverse(1234));         //should return 4321
+console.log(reverse('hello'));      //should return 'olleh'
+console.log(reverse(true));         //should return false
+console.log(reverse([1, 2, 3, 4])); //should return [4, 3, 2, 1]
+console.log(reverse([123, 222, 123, 54])); //should return [4, 3, 2, 1]
+console.log(reverse(['remember', 1234, 'myNameIs', 207])); //should return [4, 3, 2, 1]
 
 
 
@@ -218,14 +306,20 @@ Question 8: removeElements \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
+const removeElements = (array) => {
+       while (array.length = 0) {
+              array.pop()
+       };
 
+       return array;
+}
 
 
 
 /* ↑ YOUR CODE HERE ↑ */
 
 // Sample test cases for the above removeElements function (uncomment to test)
-//console.log(removeElements([1, 2, 3, 4, 5])); //should return [] (an empty array)
+console.log(removeElements([1, 2, 3, 4, 5])); //should return [] (an empty array)
 
 
 
@@ -245,6 +339,18 @@ Question 9: whichArrayIsLonger  \n`);
  * 
  * ↓ YOUR CODE HERE ↓ */
 
+const whichArrayIsLonger = (array1, array2) => {
+       let length1 = array1.length
+       let length2 = array2.length
+
+       if (length1 > length2) {
+              return array1;
+       } else if (length1 < length2) {
+              return array2
+       } else if (length1 = length2) {
+              return false;
+       }
+}
 
 
 
@@ -252,6 +358,6 @@ Question 9: whichArrayIsLonger  \n`);
 /* ↑ YOUR CODE HERE ↑ */
 
 // Sample test cases for the above whichArrayIsLonger function (uncomment to test)
-//console.log(whichArrayIsLonger([1, 2, 3, 4, 5], [1, 2, 3, 4]));    //should return [1, 2, 3, 4, 5]
-//console.log(whichArrayIsLonger([1, 2, 3, 4], [1, 2, 3, 4, 5, 6])); ///should return [1, 2, 3, 4, 5, 6]
-//console.log(whichArrayIsLonger([1, 2, 3, 4], [1, 2, 3, 4]));       //should return false (because they are the same length)
+console.log(whichArrayIsLonger([1, 2, 3, 4, 5], [1, 2, 3, 4]));    //should return [1, 2, 3, 4, 5]
+console.log(whichArrayIsLonger([1, 2, 3, 4], [1, 2, 3, 4, 5, 6])); ///should return [1, 2, 3, 4, 5, 6]
+console.log(whichArrayIsLonger([1, 2, 3, 4], [1, 2, 3, 4]));       //should return false (because they are the same length)
