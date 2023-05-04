@@ -43,9 +43,14 @@ Question 1: Declaring Let and Const variables`)
  * Step 2: Initialize two more variables using 'let' and set one value to your name, and the other to your friends name.
  *
  * ↓ YOUR CODE HERE ↓ */
+const eat = "Sandwich";
+let drink = "Coca-Cola";
+
+let self = "Jose";
+let friend = "Joey";
 
 //Question: Name a reason why you would use const instead of let.
-//Answer:
+//Answer: One reason to use const instead of let would be if the variable will never change.
 
 /*---------------------------------- Template Literals -------------------------------------*/
 console.log(`-------------------------- 
@@ -57,22 +62,25 @@ Question 2: Template Literals`)
  *
  *
  * ↓ YOUR CODE HERE ↓ */
-
+let message = `${friend} and ${self} ate a ${eat} with ${drink} for lunch.`;
 //Question: How would the sentence you wrote look if you used string concatenation instead of template literals?
 //          console.log() your answer to check
-//Answer:
+console.log(friend + " and " + self + " ate a " + eat + " with " + drink + " for lunch.");
+console.log(message);
 console.log(`-------------------------- 
 Question 2a: Oh no`)
 
 /* Oh no! You just remembered your friend is allergic to the drink we prepared!
- *
- * Step 1: In the section below, reassign your drink item to something else. console.log() your drink variable and run your code.
- * Step 2: Make a change to your code in Question 1 to fix the error. Run your code to make sure it's fixed.
- *
- * ↓ YOUR CODE HERE ↓ */
-
+*
+* Step 1: In the section below, reassign your drink item to something else. console.log() your drink variable and run your code.
+* Step 2: Make a change to your code in Question 1 to fix the error. Run your code to make sure it's fixed.
+*
+* ↓ YOUR CODE HERE ↓ */
+drink = "water";
+let message1 = `${friend} and ${self} ate a ${eat} with ${drink} for lunch.`;
+console.log(message1);
 //Question: Read the error message - in your own words - what does it mean?
-//Answer:
+//Answer: it means the code breaks when you try to re-assign a constant variable.
 
 /*---------------------------------- Arrow Functions -------------------------------------*/
 console.log(`-------------------------- 
@@ -90,9 +98,16 @@ Question 3: Arrow Functions`)
  * Step 3: Copy the code below, ↓ paste it underneath our new function, and run the code.
  *         console.log(lunchTime('Pizza','Water'))
  * ↓ YOUR CODE HERE ↓ */
-
+const lunchTime = (foodChoice, drinkChoice) => {
+   let msg = `${friend} and ${self} ate a ${foodChoice} with ${drinkChoice} for lunch.`;
+   return msg;
+}
+console.log(lunchTime('Pizza', 'Water'));
 //Question: What would your function look like if we were using the old way of creating a function?
-//Answer:
+//Answer: function lunchTime(foodChoice, drinkChoice) {
+// let msg = `${friend} and ${self} ate a ${foodChoice} with ${drinkChoice} for lunch.`;
+// return msg;
+// }
 
 /*---------------------------------- Callbacks -------------------------------------*/
 console.log(`-------------------------- 
@@ -107,5 +122,11 @@ Question 4: Callbacks`)
  * Step 3: console.log() your new function, foodForTodayAndTomorrow, and pass in lunchTime('newFoodItem', 'newDrinkItem') as the argument for the "callbackFunction" parameter.
  *
  * ↓ YOUR CODE HERE ↓ */
+const foodForTodayAndTomorrow = (tomorrowsFoodChoice, tomorrowsDrinkChoice, callbackFunction) => {
+   let msg = `${callbackFunction} Tomorrow we want ${tomorrowsFoodChoice} and ${tomorrowsDrinkChoice}.`;
+   return msg;
+}
+
+console.log(foodForTodayAndTomorrow("Fried Rice", "Coffee", lunchTime("Chicken Tenders", "Dr. Pepper")))
 
 console.log(`-----------Finished------------`)
