@@ -58,7 +58,7 @@ displaying user.*/
   }
 
   start() {
-    let selection = this.MainMenu();
+    let selection = this.mainMenu();
     while (selection != 0 || selection == "") {
       switch (selection) {
         case "1":
@@ -77,7 +77,7 @@ displaying user.*/
           selection = 0;
           break;
       }
-      selection = this.MainMenu();
+      selection = this.mainMenu();
     }
     alert(`You are viewing Week 05 Assignment Video.`);
   }
@@ -87,7 +87,7 @@ a value. This value will then go into a while loop which will keep the prompt
 persistent until the user makes an input choice.I have set - up this while loop to
 have not selection if the value has an empty string or if the selection is  not zero.
 If the selection is zero it will close the menu and show the assignment 05 video. */
-  MainMenu() {
+  mainMenu() {
     return prompt(`
         0) Week 05 Assignment Video
         1) Create new User
@@ -109,7 +109,7 @@ will have a function attached to each option. */
     this.users.push(NEWUSER);
     alert(`[${NEWUSER.describe()}] added to users`);
     /* declared new method called CreateUser() which prompts the name for a new user.
-used the same syntax as the MainMenu prompt where the prompt is persistent if the
+used the same syntax as the mainMenu prompt where the prompt is persistent if the
 user input is left blank.After the input has been typed.It alerts the user of the
 name that was input and declares it after it converts the string to uppercase.
 Pushes new user to the array called users where it will be stored. */
@@ -332,7 +332,7 @@ method.
             index = prompt(`${description}\nError: index is blank\nEnter index of the stat you wish to delete:`)
         };
         if (index > -1 && index < this.selectedUser.stats.length) {
-            alert(`You have deleted [ ${this.selectedUser.stats[index].describe()}]`)
+            alert(`You have deleted [${this.selectedUser.stats[index].describe()}]`)
             this.selectedUser.stats.splice(index, 1);
         } else {
             alert(`${description}\nError: Index invalid. Please input index from current stats.`);
