@@ -1,0 +1,18 @@
+{
+  "name": "unit_testing",
+  "version": "1.0.0",
+  "description": "unit_testing mocha and chai for LMS video notes",
+  "main": "unitTesting.js",
+  "scripts": {
+    "test": "console.log(\"Hello\")"
+  },
+  "keywords": [
+    "unit_testing"
+  ],
+  "author": "Jge",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
