@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="node_modules/mocha/mocha.css">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 06 Assignment Submission</title>
 </head>
 <body>
+    <h1>Week 06 Assignment</h1>
+    <h2>Week 06 Video</h2>
+    <video controls src="W06AssSub.mp4" width="500"></video>
+    <h3>Open the console to view game! Refresh for new game!</h3>
     <script src="W06AssSub.js"></script>
+     <div id="mocha"><p><a href=".">Index</a></p></div>
+    <div id="messages"></div>
+    <div id="fixtures"></div>
+    <script src="node_modules/mocha/mocha.js"></script>
+    <script src="node_modules/chai/chai.js"></script>
+    <script src="W06AssSub.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="testing.js"></script>
+    <script>mocha.run()</script>
 </body>
 </html>
