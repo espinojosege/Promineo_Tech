@@ -64,20 +64,19 @@ saying that the deck was generated.
       for (let index = 0; index < suits.length; index++) {
         const suit = suits[index];
         if (n == 13) {
-          let card = new Card(`K ${suit}`, 10, Math.ceil(Math.random() * 52));
+          let card = new Card(`K of ${suit}`, 10, Math.ceil(Math.random() * 52));
           this.deckArray.push(card);
         } else if (n == 12) {
-          let card = new Card(`Q ${suit}`, 10, Math.ceil(Math.random() * 52));
+          let card = new Card(`Q of ${suit}`, 10, Math.ceil(Math.random() * 52));
           this.deckArray.push(card);
         } else if (n == 11) {
-          let card = new Card(`J ${suit}`, 10, Math.ceil(Math.random() * 52));
+          let card = new Card(`J of ${suit}`, 10, Math.ceil(Math.random() * 52));
+          this.deckArray.push(card);
+        } else if (n == 1) {
+          let card = new Card(`A of ${suit}`, 1, Math.ceil(Math.random() * 52));
           this.deckArray.push(card);
         } else {
-          let card = new Card(
-            `${n} ${suit}`,
-            n,
-            Math.ceil(Math.random() * 52)
-          );
+          let card = new Card(`${n} of ${suit}`, n, Math.ceil(Math.random() * 52));
           this.deckArray.push(card);
         }
       }
