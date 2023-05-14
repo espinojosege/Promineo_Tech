@@ -189,17 +189,17 @@ number of points won. It will log out which player one, with how many points and
 Game Results`);
     if (deck.players[0].points.length > deck.players[1].points.length) {
       console.log(
-        `player1 Won this game with ${deck.players[0].points.length} points!`
+        `player1 Won this game with ${deck.players[0].points.length} points! player2 Lost this game with ${deck.players[1].points.length} points!`
       );
     } else if (deck.players[0].points.length < deck.players[1].points.length) {
       console.log(
-        `player2 Won this game with ${deck.players[1].points.length} points!`
+        `player1 Lost this game with ${deck.players[0].points.length} points! player2 Won this game with ${deck.players[1].points.length} points!`
       );
     } else if (
       (deck.players[0].points.length = deck.players[1].points.length)
     ) {
       console.log(
-        `player1 tied player2 this game with ${deck.players[0].points.length} points!`
+        `player1 with ${deck.players[0].points.length} points tied player2 this game with ${deck.players[1].points.length} points!`
       );
     }
   }
