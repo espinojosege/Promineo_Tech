@@ -1,0 +1,96 @@
+html {
+  font-size: 10px;
+}
+
+/* - */body {
+  font-size: 1.2rem;
+}
+/* - */ /* - */.headings {
+  text-decoration: underline;
+}
+/* - */ /* - */#submitButton {
+  width: 10rem;
+}
+/* - */ /* - */#submitButton:hover {
+  background-color:orange;    
+  border-radius: 5px;
+}
+/* - */ /* - */h1 {
+  font-size: 5rem;
+}
+/* - */ /* - */h2 {
+  font-size: 4rem;
+}
+/* - */ /* - */h3 {
+  font-size: 3rem;
+}
+/* - */ /* - */h4 {
+  font-size: 2rem;
+}
+/* - */ /* - */h5 {
+  font-size: 1.6rem;
+}
+/* - */ /* - */div {
+  font-size: 1.4rem;
+  border: 1px solid black;
+  width: 760px;
+}
+/* - */ /* - */ /* - */ol {
+  font-size: 1.6rem;
+  padding-inline-start: 4rem;
+}
+/* - */ /* - */ /* - */ /* - */ol li {
+  font-size: 1.5rem;
+}
+/* - */ /* - */ /* - */ /* - */ol li::marker {
+  font-variant-numeric: proportional-nums;
+}
+/* - */ /* - */ /* - */ /* - */ol li a {
+  text-transform: uppercase;
+}
+/* - */ /* - */ /* - */video {
+  width: 50rem;
+}
+/* - */ /* - */ /* - */p {
+  width: 100%;
+  line-height: 1.4rem;
+}
+/* - */ /* - */ /* - */img {
+  border: 1px solid black;
+}
+/* - */ /* - */ /* - */table {
+  margin-bottom: 0.5rem;
+  width: 90%;
+  border-collapse: collapse;
+  border: 1px solid purple;
+}
+/* - */ /* - */ /* - */ /* - */table tr {
+  border-bottom: 1px solid purple;
+  line-height: 1.6rem;
+}
+/* - */ /* - */ /* - */ /* - */table tr:nth-child(1) {
+  background-color: rgba(128, 0, 128, 0.25);
+}
+/* - */ /* - */ /* - */ /* - */table tr:nth-child(even) {
+  background-color: rgba(128, 0, 128, 0.05);
+}
+/* - */ /* - */ /* - */ /* - */table tr:hover {
+  background-color: rgba(128, 0, 128, 0.25);
+}
+/* - */ /* - */ /* - */ /* - */ /* - */table tr th {
+  font-size: 1.6rem;
+}
+/* - */ /* - */ /* - */ /* - */ /* - */table tr td {
+  font-size: 1.4rem;
+}
+/* - */ /* - */ /* - */form {
+  background-color: whitesmoke;
+}
+/* - */ /* - */ /* - *//* - */form label{
+  font-size: 1.4rem;
+  text-decoration: underline;
+  line-height: 1.4rem;
+}
+/* - */ /* - */ /* - *//* - */ form input{
+  background-color: rgba(128, 0, 128, 0.05);
+}
