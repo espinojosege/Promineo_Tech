@@ -33,4 +33,5 @@ function createLinks(linkUrl){
 
     return li
 };
+
 let links = htmlLinks.forEach((element) => olLinks?.appendChild(createLinks(element)));

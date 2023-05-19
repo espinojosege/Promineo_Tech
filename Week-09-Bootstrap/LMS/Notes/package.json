@@ -1,0 +1,21 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "notes for week 09 bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(\"hellow\");"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\"\""
+  },
+  "keywords": [
+    "\"\""
+  ],
+  "author": "JoseGEspino",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  }
+}
