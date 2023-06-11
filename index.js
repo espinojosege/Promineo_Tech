@@ -17,6 +17,7 @@ let htmlLinks = [
   "Week-07-HTML\\LMS\\Assignment\\Submission\\index.html",
   `Week-08-CSS\\LMS\\Assignment\\Submission\\html\\index.html`,
   "Week-09-Bootstrap\\LMS\\Assignment\\Submission\\index.html",
+  "Week-10-JavaScript_and_DOM_Manipulation\\LMS\\Assignment\\Submission\\index.html",
 ];
 
 
