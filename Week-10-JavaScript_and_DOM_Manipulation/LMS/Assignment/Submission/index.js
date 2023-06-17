@@ -27,10 +27,9 @@ let tableRows = [];
 let tbody = document.getElementById("tbody");
 let createEntry = document.getElementById("submit");
 
-
 function displayTable(array) {
   tbody.innerHTML = "";
-  
+
   for (let i = 0; i < array.length; i++) {
     tbody.appendChild(createRow(array[i]));
   }
@@ -44,4 +43,8 @@ createEntry.addEventListener("click", () => {
   tableRows.push(new TableRow(upc, name));
 
   displayTable(tableRows);
+});
+
+tbody.addEventListener("mouseover", () => {
+  tbody.setAttribute("style", "background-color: cyan;");
 });
