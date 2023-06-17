@@ -21,20 +21,23 @@ let htmlLinks = [
   "Week-11-JQuery_and_AJAX\\LMS\\Assignment\\Submission\\index.html",
 ];
 
-
 let olLinks = document.getElementById("htmlLinks");
 
-function createLinks(linkUrl){
-    let li = document.createElement("li");
-    let link = document.createElement("a");
-    link.href = linkUrl;
-    
-    let linkStringArray = linkUrl.split("\\")
-    let LinkTextContent = `${linkStringArray[0]} ${linkStringArray[linkStringArray.length - 1]}`;
-    link.textContent = LinkTextContent;
-    li.appendChild(link);
+function createLinks(linkUrl) {
+  let li = document.createElement("li");
+  let link = document.createElement("a");
+  link.href = linkUrl;
 
-    return li
-};
+  let linkStringArray = linkUrl.split("\\");
+  let LinkTextContent = `${linkStringArray[0]} ${
+    linkStringArray[linkStringArray.length - 1]
+  }`;
+  link.textContent = LinkTextContent;
+  li.appendChild(link);
 
-let links = htmlLinks.forEach((element) => olLinks?.appendChild(createLinks(element)));
+  return li;
+}
+
+let links = htmlLinks.forEach((element) =>
+  olLinks?.appendChild(createLinks(element))
+);
