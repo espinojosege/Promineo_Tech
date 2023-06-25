@@ -1,19 +1,19 @@
-function getElement(id = "") {
-  let element = document.getElementById(id);
-  return element;
+async function logJSONData() {
+  let array = [];
+  const response = await fetch(mockAPI);
+  const jsonData = await response.json();
+  //console.log(jsonData.length);
+  array = jsonData;
+  return array;
 }
-function createElement(element) {
-  let ele = document.createElement(element);
-  return ele;
+// Example POST method implementation:
+async function postDataDelete(url = "") {
+  // Default options are marked with *
+  const response = await fetch(url, {
+    method: "DELETE", // *GET, POST, PUT, DELETE, etc.
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
 }
-class Room {
-  constructor(name, moths) {
-    this.name = name;
-    this.moths = moths;
-    this.id = undefined;
-  }
-}
-let rooms = [];
 // Example POST method implementation:
 async function postData(url = "", data = {}) {
   // Default options are marked with *
@@ -32,43 +32,85 @@ async function postData(url = "", data = {}) {
   });
   return response.json(); // parses JSON response into native JavaScript objects
 }
-//postData("https://64954eacb08e17c91791e500.mockapi.io/page", magePage).then(
-//  (data) => {
-//    console.log(data); // JSON data parsed by `data.json()` call
-//  }
-//);
-async function logJSONData(array) {
-  const response = await fetch(
-    "https://64954eacb08e17c91791e500.mockapi.io/page"
-  );
-  const jsonData = await response.json();
-  for (let i = 0; i < jsonData.length; i++) {
-    let currentData = jsonData[i];
-    //console.log(currentData);
-    let room = new Room(currentData.name, currentData.moths);
-    room.id = currentData.id;
-    //console.log(runePage)
-    array.push(room);
-  }
-  array.forEach((item) => {
-    console.log(item);
-  });
+function getEl(id) {
+  let element = document.getElementById(id);
+  return element;
 }
-//logJSONData();
-/*<button type="button" class="btn btn-secondary" id="createRunePage">*/
-let b_createPage = getElement("createRunePage");
-/*<div class="row" id="pages">*/
-let div_pages = getElement("pages");
-/*<input type="text" class="form-control" id="name" aria-describedby="nameHelp"/>*/
-let nameInput = getElement("name");
-const mockAPI = "https://64954eacb08e17c91791e500.mockapi.io/page";
-b_createPage.onclick = () => {
-  let room = new Room(nameInput.value, 0);
-  postData(mockAPI, room).then((data) => {
-    console.log(data);
-  });
-  logJSONData(rooms);
-  //console.log(runePage);
-};
+function createEl(el) {
+  let element = document.createElement(el);
+  return element;
+}
+function div_room(room) {
+  let div_parent = createEl("div");
+  div_parent.classList = "col border";
+  let div_childRow = createEl("div");
+  div_childRow.classList = "row row-cols-2";
+  div_childRow.setAttribute("id", `${room.name}${room.id}`);
+  let div_childRowChild1 = createEl("div");
+  div_childRowChild1.classList = "col";
+  div_childRowChild1.innerHTML = `${room.name} - Moths:${room.moths} `;
+  if (room.moths == -1) {
+    let form_group = createEl("div");
+    form_group.classList = "form-group";
+    let label = createEl("label");
+    label.innerHTML = "Moths in this room:";
+    label.setAttribute("for", `${room.name}${room.id}_input`);
+    let inputMoths = createEl("input");
+    inputMoths.setAttribute("type", "text");
+    inputMoths.setAttribute("class", "form-control");
+    inputMoths.setAttribute("id", `${room.name}${room.id}_input`);
+    form_group.appendChild(label);
+    form_group.appendChild(inputMoths);
+    div_childRowChild1.innerHTML = `${room.name}: `;
+    div_childRowChild1.appendChild(form_group);
+  }
+  let div_childRowChild2 = createEl("div");
+  div_childRowChild2.classList = "col";
+  let btn_delete = createEl("button");
+  btn_delete.classList = "btn btn-warning";
+  btn_delete.setAttribute("type", "button");
+  btn_delete.setAttribute("id", `${room.name}${room.id}_delete`);
+  btn_delete.innerHTML = "delete";
+  btn_delete.onclick = () => {
+    console.log(`button clicked for ${room.name}`);
+    postDataDelete(mockAPI + `/${room.id}`).then((data) => {
+      console.log(data); // JSON data parsed by `data.json()` call
 
-//logJSONData(rooms);
+      logJSONData().then((data) => {
+        rooms = data;
+        console.log(rooms);
+        div_rooms.innerHTML = "";
+        rooms.forEach((room) => {
+          div_rooms.appendChild(div_room(room));
+        });
+      });
+    });
+  };
+  let btn_edit = createEl("button");
+  btn_edit.classList = "btn btn-success";
+  btn_edit.setAttribute("type", "button");
+  btn_edit.setAttribute("id", `${room.name}${room.id}_edit`);
+  btn_edit.innerHTML = "edit";
+  div_childRowChild2.appendChild(btn_delete);
+  div_childRowChild2.appendChild(btn_edit);
+  div_childRow.appendChild(div_childRowChild1);
+  div_childRow.appendChild(div_childRowChild2);
+  div_parent.appendChild(div_childRow);
+  return div_parent;
+}
+const div_rooms = getEl("rooms");
+const mockAPI = "https://64954eacb08e17c91791e500.mockapi.io/page";
+let rooms = [];
+
+//postData(mockAPI, ).then((data) => {
+//console.log(data); // JSON data parsed by `data.json()` call
+//});
+
+logJSONData().then((data) => {
+  rooms = data;
+  console.log(rooms);
+  div_rooms.innerHTML = "";
+  rooms.forEach((room) => {
+    div_rooms.appendChild(div_room(room));
+  });
+});
