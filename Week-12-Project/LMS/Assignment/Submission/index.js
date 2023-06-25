@@ -98,7 +98,31 @@ function div_room(room) {
   div_parent.appendChild(div_childRow);
   return div_parent;
 }
+class Room {
+  constructor(name) {
+    this.name = name;
+    this.moths = -1;
+    this.id = undefined;
+  }
+}
 const div_rooms = getEl("rooms");
+const btn_createRoom = getEl("createRoom");
+let input_name = getEl("name");
+btn_createRoom.onclick = () => {
+  let room = new Room(input_name.value);
+  postData(mockAPI, room).then((data) => {
+    console.log(data); // JSON data parsed by `data.json()` call
+
+    logJSONData().then((data) => {
+      rooms = data;
+      console.log(rooms);
+      div_rooms.innerHTML = "";
+      rooms.forEach((room) => {
+        div_rooms.appendChild(div_room(room));
+      });
+    });
+  });
+};
 const mockAPI = "https://64954eacb08e17c91791e500.mockapi.io/page";
 let rooms = [];
 
