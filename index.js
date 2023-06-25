@@ -21,7 +21,6 @@ let htmlLinks = [
   "Week-11-JQuery_and_AJAX\\LMS\\Assignment\\Submission\\index.html",
   "Week-12-Project\\LMS\\Assignment\\Submission\\index.html",
 ];
-
 let olLinks = document.getElementById("htmlLinks");
 
 function createLinks(linkUrl) {
