@@ -32,6 +32,23 @@ async function postData(url = "", data = {}) {
   });
   return response.json(); // parses JSON response into native JavaScript objects
 }
+async function postDataPut(url = "", data = {}) {
+  // Default options are marked with *
+  const response = await fetch(url, {
+    method: "PUT", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data), // body data type must match "Content-Type" header
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
+}
 function getEl(id) {
   let element = document.getElementById(id);
   return element;
@@ -77,24 +94,17 @@ function div_room(room) {
       console.log(tempRooms[index]);
       tempRooms[index].moths = inputMoths.value;
       console.log(tempRooms[index]);
-      for (let i = 0; i < rooms.length; i++) {
-        postDataDelete(mockAPI + `/` + rooms[i].id).then((data) => {
-          console.log(data);
-          postData(mockAPI, tempRooms[i]).then((data) => {
-            console.log(data); // JSON data parsed by `data.json()` call
-            logJSONData().then((data) => {
-              rooms = data;
-              console.log(rooms);
-              div_rooms.innerHTML = "";
-              rooms.forEach((room) => {
-                div_rooms.appendChild(div_room(room));
-              });
-            });
+      postDataPut(`${mockAPI}/${room.id}`, tempRooms[index]).then((data) => {
+        console.log(data);
+        logJSONData().then((data) => {
+          rooms = data;
+          console.log(rooms);
+          div_rooms.innerHTML = "";
+          rooms.forEach((room) => {
+            div_rooms.appendChild(div_room(room));
           });
         });
-      }
-      rooms = [];
-
+      });
     };
     form_group.appendChild(btn_submitMoths);
     div_childRowChild1.innerHTML = `${room.name}: `;
