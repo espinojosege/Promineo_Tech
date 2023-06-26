@@ -61,6 +61,42 @@ function div_room(room) {
     inputMoths.setAttribute("id", `${room.name}${room.id}_input`);
     form_group.appendChild(label);
     form_group.appendChild(inputMoths);
+    let btn_submitMoths = createEl("button");
+    btn_submitMoths.classList = "btn btn-info";
+    btn_submitMoths.setAttribute("type", "button");
+    btn_submitMoths.setAttribute("id", `${room.name}${room.id}_submitMoths`);
+    btn_submitMoths.innerHTML = "Submit";
+    btn_submitMoths.onclick = () => {
+      console.log(room.name, room.id, inputMoths.value);
+      let tempRooms = [];
+      tempRooms = rooms;
+      console.log(tempRooms);
+      console.log(rooms);
+      let index = tempRooms.indexOf(room);
+      console.log(index);
+      console.log(tempRooms[index]);
+      tempRooms[index].moths = inputMoths.value;
+      console.log(tempRooms[index]);
+      for (let i = 0; i < rooms.length; i++) {
+        postDataDelete(mockAPI + `/` + rooms[i].id).then((data) => {
+          console.log(data);
+          postData(mockAPI, tempRooms[i]).then((data) => {
+            console.log(data); // JSON data parsed by `data.json()` call
+            logJSONData().then((data) => {
+              rooms = data;
+              console.log(rooms);
+              div_rooms.innerHTML = "";
+              rooms.forEach((room) => {
+                div_rooms.appendChild(div_room(room));
+              });
+            });
+          });
+        });
+      }
+      rooms = [];
+
+    };
+    form_group.appendChild(btn_submitMoths);
     div_childRowChild1.innerHTML = `${room.name}: `;
     div_childRowChild1.appendChild(form_group);
   }
@@ -92,7 +128,7 @@ function div_room(room) {
   btn_edit.setAttribute("id", `${room.name}${room.id}_edit`);
   btn_edit.innerHTML = "edit";
   div_childRowChild2.appendChild(btn_delete);
-  div_childRowChild2.appendChild(btn_edit);
+  //div_childRowChild2.appendChild(btn_edit);
   div_childRow.appendChild(div_childRowChild1);
   div_childRow.appendChild(div_childRowChild2);
   div_parent.appendChild(div_childRow);
