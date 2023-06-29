@@ -20,7 +20,6 @@ let htmlLinks = [
   "Week-10-JavaScript_and_DOM_Manipulation\\LMS\\Assignment\\Submission\\index.html",
   "Week-11-JQuery_and_AJAX\\LMS\\Assignment\\Submission\\index.html",
   "Week-12-Project\\LMS\\Assignment\\Submission\\index.html",
-  "Week-13-Intro_to_React_Webpack_Components_and_JSX\\LMS\\Assignment\\Submission\\week13\\build\\index.html",
 ];
 let olLinks = document.getElementById("htmlLinks");
 
@@ -38,7 +37,20 @@ function createLinks(linkUrl) {
 
   return li;
 }
+function addlinks(url, name) {
+  let li = document.createElement("li");
+  let link = document.createElement("a");
+  link.href = url;
+  let LinkTextContent = `${name}`;
+  link.textContent = LinkTextContent;
+  li.appendChild(link);
 
+  return li;
+}
 let links = htmlLinks.forEach((element) =>
   olLinks?.appendChild(createLinks(element))
+);
+
+olLinks.appendChild(
+  addlinks(`https://espinojosege.github.io/reactAppWeek13/`, `Week 13 ReactApp`)
 );
