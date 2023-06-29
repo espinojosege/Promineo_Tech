@@ -1,0 +1,76 @@
+html {
+  display: table;
+  margin: auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  /*border: 0.2rem dotted black;*/
+  width: 100%;
+  height: 100%;
+  display: table;
+  margin: auto;
+  background-color: whitesmoke;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  display: inline;
+  background-color: transparent;
+}
+ul li a {
+  border-radius: 10px;
+
+  padding: 0.5rem;
+  text-decoration: underline;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  color: black;
+  display: inline;
+  background-color: orange;
+}
+ul li a:hover {
+  text-decoration: none;
+  color: white;
+  display: inline;
+  background-color: lightblue;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body #root {
+  text-align: center;
+  /*background-color: beige;*/
+  display: table-row;
+}
+
+body #body .login {
+  text-align: center;
+  /*display: ;*/
+  border: 0.2rem solid black;
+  /*vertical-align: bottom;*/
+  align-self: center;
+  padding: 0;
+}
+
+h3 {
+  padding: 0;
+  margin: 0.2rem;
+}
