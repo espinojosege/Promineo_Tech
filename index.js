@@ -20,6 +20,7 @@ let htmlLinks = [
   "Week-10-JavaScript_and_DOM_Manipulation\\LMS\\Assignment\\Submission\\index.html",
   "Week-11-JQuery_and_AJAX\\LMS\\Assignment\\Submission\\index.html",
   "Week-12-Project\\LMS\\Assignment\\Submission\\index.html",
+  "Week-13-Intro_to_React_Webpack_Components_and_JSX\\LMS\\Assignment\\Submission\\week13\\build\\index.html",
 ];
 let olLinks = document.getElementById("htmlLinks");
 
